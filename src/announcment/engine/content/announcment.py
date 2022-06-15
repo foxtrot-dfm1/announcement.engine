@@ -9,10 +9,6 @@ from plone.dexterity.content import Container
 class IAnnouncment(model.Schema):
     """Announcment C.T. Interface"""
 
-    title = schema.TextLine(
-        title="Title",
-    )
-
     description = schema.Text(
         title="Description",
         max_length=512
