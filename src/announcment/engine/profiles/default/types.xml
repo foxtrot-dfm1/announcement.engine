@@ -1,4 +1,5 @@
 <object name="portal_types" meta_type="Plone Types Tool">
   <object name="announcment" meta_type="Dexterity FTI"/>
   <object name="announcment_category" meta_type="Dexterity FTI"/>
+  <object name="announcment_area" meta_type="Dexterity FTI"/>
 </object>
