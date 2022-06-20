@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="plone">
+
+<head>
+    <metal:block metal:fill-slot="head_slot">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+            >
+    </metal:block>
+</head>
+<body>
+
+<metal:content-core fill-slot="main">
+    
+    <form name="announcment_search_form"
+          id="announcment_search_form"
+          role="search"
+          class="pat-formautofocus announcment_search"
+          >
+
+        <div class="input-group">
+          <input class="searchPage form-control"
+                 name="SearchableText"
+                 type="text"
+                 size="25"
+                 title="Search Site"
+                 i18n:attributes="title title_search_title;"
+                 />
+          <span class="input-group-btn">
+            <input class="searchPage allowMultiSubmit btn btn-primary" type="submit"
+                   value="Search"
+                   id="announcment_search_submit"
+                   >
+          </span>
+        </div>
+    </form>
+    <div class="container pt-5" id="container_announcments"></div>
+
+<script type="text/javascript"
+    tal:attributes="src string:${portal_url}/++plone++announcment.engine.static/announcment_search.js">
+</script>
+</metal:content-core>
+</body>
+</html>

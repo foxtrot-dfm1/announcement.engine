@@ -13,9 +13,20 @@
 
   <!-- Publish static files -->
   <plone:static
+<<<<<<< HEAD:src/announcement/engine/browser/configure.zcml
       name="announcement.engine"
+=======
+      name="announcment.engine.static"
+>>>>>>> 20068ed (Add search view):src/announcment/engine/browser/configure.zcml
       type="plone"
       directory="static"
       />
+
+  <browser:page
+     name="announcment_search"
+     for="*"
+     template="templates/announcment_search.pt"
+     permission="zope2.View"
+     />
 
 </configure>
