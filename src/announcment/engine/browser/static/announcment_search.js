@@ -17,22 +17,22 @@ const SEARCH_QUERY_TEMPLATE = {
     ]
 };
 
-const SEARCH_PATH = location.origin + '/' + location.pathname.split('/')[1] + '/@querystring-search';
+const SEARCH_URL = location.origin + '/' + location.pathname.split('/')[1] + '/@querystring-search';
 
 
 function executeSearchRequest(searchableText){
-    let requests_structute = {
+    let requests_structure = {
         ...SEARCH_QUERY_TEMPLATE
     };
 
-    requests_structute['query'][1]['v'] = searchableText;
+    requests_structure['query'][1]['v'] = searchableText;
 
     purge_result_list();
 
     $.ajax({
         type: "POST",
-        url: SEARCH_PATH,
-        data: JSON.stringify(requests_structute),
+        url: SEARCH_URL,
+        data: JSON.stringify(requests_structure),
         contentType: 'application/json;',
         dataType: 'json',
         headers: {
