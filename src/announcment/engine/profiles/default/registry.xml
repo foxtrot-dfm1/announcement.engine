@@ -1,0 +1,3 @@
+<record name="plone.enable_self_reg">
+  <value>True</value>
+</record>
