@@ -2,18 +2,18 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="announcment.engine">
+    i18n_domain="announcement.engine">
 
   <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
   <include package="z3c.jbot" file="meta.zcml" />
   <browser:jbot
       directory="overrides"
-      layer="announcment.engine.interfaces.IAnnouncmentEngineLayer"
+      layer="announcement.engine.interfaces.IAnnouncementEngineLayer"
       />
 
   <!-- Publish static files -->
   <plone:static
-      name="announcment.engine"
+      name="announcement.engine"
       type="plone"
       directory="static"
       />

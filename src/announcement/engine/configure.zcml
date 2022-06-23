@@ -3,7 +3,7 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="announcment.engine">
+    i18n_domain="announcement.engine">
 
   <i18n:registerTranslations directory="locales" />
 
@@ -19,25 +19,25 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="announcment.engine"
+      title="announcement.engine"
       directory="profiles/default"
-      description="Installs the announcment.engine add-on."
+      description="Installs the announcement.engine add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.post_install"
       />
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="announcment.engine (uninstall)"
+      title="announcement.engine (uninstall)"
       directory="profiles/uninstall"
-      description="Uninstalls the announcment.engine add-on."
+      description="Uninstalls the announcement.engine add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.uninstall"
       />
 
   <utility
       factory=".setuphandlers.HiddenProfiles"
-      name="announcment.engine-hiddenprofiles"
+      name="announcement.engine-hiddenprofiles"
       />
 
   <!-- -*- extra stuff goes here -*- -->

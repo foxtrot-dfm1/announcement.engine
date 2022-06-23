@@ -1,5 +1,5 @@
 ==================
-announcment.engine
+announcement.engine
 ==================
 
 User documentation

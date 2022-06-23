@@ -4,5 +4,5 @@
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 
-class IAnnouncmentEngineLayer(IDefaultBrowserLayer):
+class IAnnouncementEngineLayer(IDefaultBrowserLayer):
     """Marker interface that defines a browser layer."""

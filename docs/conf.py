@@ -42,7 +42,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'announcment.engine'
+project = u'announcement.engine'
 copyright = u'roman kysil (foxtrot-dfm1)'
 author = u'roman kysil (foxtrot-dfm1)'
 
@@ -199,7 +199,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'announcment.enginedoc'
+htmlhelp_basename = 'announcement.enginedoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 

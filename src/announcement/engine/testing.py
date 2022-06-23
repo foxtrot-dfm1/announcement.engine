@@ -9,10 +9,10 @@ from plone.app.testing import (
 )
 from plone.testing import z2
 
-import announcment.engine
+import announcement.engine
 
 
-class AnnouncmentEngineLayer(PloneSandboxLayer):
+class AnnouncementEngineLayer(PloneSandboxLayer):
 
     defaultBases = (PLONE_APP_CONTENTTYPES_FIXTURE,)
 
@@ -22,32 +22,32 @@ class AnnouncmentEngineLayer(PloneSandboxLayer):
         # layer.
         import plone.restapi
         self.loadZCML(package=plone.restapi)
-        self.loadZCML(package=announcment.engine)
+        self.loadZCML(package=announcement.engine)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'announcment.engine:default')
+        applyProfile(portal, 'announcement.engine:default')
 
 
-ANNOUNCMENT_ENGINE_FIXTURE = AnnouncmentEngineLayer()
+ANNOUNCEMEMNT_ENGINE_FIXTURE = AnnouncementEngineLayer()
 
 
-ANNOUNCMENT_ENGINE_INTEGRATION_TESTING = IntegrationTesting(
-    bases=(ANNOUNCMENT_ENGINE_FIXTURE,),
-    name='AnnouncmentEngineLayer:IntegrationTesting',
+ANNOUNCEMEMNT_ENGINE_INTEGRATION_TESTING = IntegrationTesting(
+    bases=(ANNOUNCEMEMNT_ENGINE_FIXTURE,),
+    name='AnnouncementEngineLayer:IntegrationTesting',
 )
 
 
-ANNOUNCMENT_ENGINE_FUNCTIONAL_TESTING = FunctionalTesting(
-    bases=(ANNOUNCMENT_ENGINE_FIXTURE,),
-    name='AnnouncmentEngineLayer:FunctionalTesting',
+ANNOUNCEMEMNT_ENGINE_FUNCTIONAL_TESTING = FunctionalTesting(
+    bases=(ANNOUNCEMEMNT_ENGINE_FIXTURE,),
+    name='AnnouncementEngineLayer:FunctionalTesting',
 )
 
 
-ANNOUNCMENT_ENGINE_ACCEPTANCE_TESTING = FunctionalTesting(
+ANNOUNCEMEMNT_ENGINE_ACCEPTANCE_TESTING = FunctionalTesting(
     bases=(
-        ANNOUNCMENT_ENGINE_FIXTURE,
+        ANNOUNCEMEMNT_ENGINE_FIXTURE,
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
         z2.ZSERVER_FIXTURE,
     ),
-    name='AnnouncmentEngineLayer:AcceptanceTesting',
+    name='AnnouncementEngineLayer:AcceptanceTesting',
 )
