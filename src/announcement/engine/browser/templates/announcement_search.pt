@@ -19,10 +19,10 @@
 
 <metal:content-core fill-slot="main">
     
-    <form name="announcment_search_form"
-          id="announcment_search_form"
+    <form name="announcement_search_form"
+          id="announcement_search_form"
           role="search"
-          class="pat-formautofocus announcment_search"
+          class="pat-formautofocus announcement_search"
           >
 
         <div class="input-group">
@@ -36,15 +36,15 @@
           <span class="input-group-btn">
             <input class="searchPage allowMultiSubmit btn btn-primary" type="submit"
                    value="Search"
-                   id="announcment_search_submit"
+                   id="announcement_search_submit"
                    >
           </span>
         </div>
     </form>
-    <div class="container pt-5" id="container_announcments"></div>
+    <div class="container pt-5" id="container_announcements"></div>
 
 <script type="text/javascript"
-    tal:attributes="src string:${portal_url}/++plone++announcment.engine.static/announcment_search.js">
+    tal:attributes="src string:${portal_url}/++plone++announcement.engine.static/announcement_search.js">
 </script>
 </metal:content-core>
 </body>
