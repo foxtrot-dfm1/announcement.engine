@@ -27,10 +27,8 @@
 
   <!-- Schema, class and security -->
   <property name="add_permission">plone.app.contenttypes.addFolder</property>
-  <property name="klass">plone.app.contenttypes.content.Folder</property>
-  <property name="model_file">announcement.engine.content:announcement_category.xml</property>
-  <property name="model_source"></property>
-  <property name="schema"></property>
+  <property name="klass">announcement.engine.content.announcement_category.AnnouncementCategory</property>
+  <property name="schema">announcement.engine.content.announcement_category.IAnnouncementCategory</property>
 
   <!-- Enabled behaviors -->
   <property name="behaviors" purge="false">
