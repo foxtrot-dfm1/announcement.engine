@@ -2,13 +2,13 @@
 <object
     i18n:domain="plone"
     meta_type="Dexterity FTI"
-    name="announcment_category"
+    name="announcement_category"
     xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
   <!-- Basic properties -->
   <property
       i18n:translate=""
-      name="title">Announcment category</property>
+      name="title">Announcement area</property>
   <property
       i18n:translate=""
       name="description"></property>
@@ -20,7 +20,7 @@
 
   <!-- Hierarchy control -->
   <property name="allowed_content_types">
-    <element value="announcment"/>
+    <element value="announcement_category"/>
   </property>
   <property name="filter_content_types">True</property>
   <property name="global_allow">True</property>
@@ -28,7 +28,7 @@
   <!-- Schema, class and security -->
   <property name="add_permission">plone.app.contenttypes.addFolder</property>
   <property name="klass">plone.app.contenttypes.content.Folder</property>
-  <property name="model_file">announcment.engine.content:announcment_category.xml</property>
+  <property name="model_file">announcement.engine.content:announcement_area.xml</property>
   <property name="model_source"></property>
   <property name="schema"></property>
 
@@ -45,7 +45,7 @@
   </property>
 
   <!-- View information -->
-  <property name="add_view_expr">string:${folder_url}/++add++announcment_category</property>
+  <property name="add_view_expr">string:${folder_url}/++add++announcement_area</property>
   <property name="default_view">listing_view</property>
   <property name="default_view_fallback">False</property>
   <property name="immediate_view">view</property>

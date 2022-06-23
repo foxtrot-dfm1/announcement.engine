@@ -4,17 +4,17 @@
 #
 # Run this robot test stand-alone:
 #
-#  $ bin/test -s announcment.engine -t test_example.robot --all
+#  $ bin/test -s announcement.engine -t test_example.robot --all
 #
 # Run this robot test with robot server (which is faster):
 #
 # 1) Start robot server:
 #
-# $ bin/robot-server --reload-path src announcment.engine.testing.ANNOUNCMENT_ENGINE_ACCEPTANCE_TESTING
+# $ bin/robot-server --reload-path src announcement.engine.testing.ANNOUNCEMEMNT_ENGINE_ACCEPTANCE_TESTING
 #
 # 2) Run robot tests:
 #
-# $ bin/robot src/announcment/engine/tests/robot/test_example.robot
+# $ bin/robot src/announcement/engine/tests/robot/test_example.robot
 #
 # See the http://docs.plone.org for further details (search for robot
 # framework).

@@ -5,10 +5,10 @@ import pkg_resources
 import subprocess
 
 
-domain = 'announcment.engine'
+domain = 'announcement.engine'
 os.chdir(pkg_resources.resource_filename(domain, ''))
 os.chdir('../../../')
-target_path = 'src/announcment/engine/'
+target_path = 'src/announcement/engine/'
 locale_path = target_path + 'locales/'
 i18ndude = './bin/i18ndude'
 

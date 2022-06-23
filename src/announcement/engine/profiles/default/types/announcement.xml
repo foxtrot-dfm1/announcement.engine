@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <object name="talk" meta_type="Dexterity FTI" i18n:domain="plone"
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
- <property name="title" i18n:translate="">Announcment</property>
+ <property name="title" i18n:translate="">Announcement</property>
  <property name="description" i18n:translate=""></property>
  <property name="icon_expr">string:${portal_url}/document_icon.png</property>
- <property name="factory">announcment</property>
- <property name="add_view_expr">string:${folder_url}/++add++announcment</property>
+ <property name="factory">announcement</property>
+ <property name="add_view_expr">string:${folder_url}/++add++announcement</property>
  <property name="link_target"></property>
  <property name="immediate_view">view</property>
  <property name="global_allow">True</property>
@@ -18,8 +18,8 @@
  </property>
  <property name="default_view_fallback">False</property>
  <property name="add_permission">cmf.AddPortalContent</property>
- <property name="klass">announcment.engine.content.announcment.Announcment</property>
- <property name="schema">announcment.engine.content.announcment.IAnnouncment</property>
+ <property name="klass">announcement.engine.content.announcement.Announcement</property>
+ <property name="schema">announcement.engine.content.announcement.IAnnouncement</property>
  <property name="behaviors">
   <element value="plone.dublincore"/>
   <element value="plone.namefromtitle"/>

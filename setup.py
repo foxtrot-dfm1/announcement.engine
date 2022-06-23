@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Installer for the announcment.engine package."""
+"""Installer for the announcement.engine package."""
 
 from setuptools import find_packages
 from setuptools import setup
@@ -13,7 +13,7 @@ long_description = '\n\n'.join([
 
 
 setup(
-    name='announcment.engine',
+    name='announcement.engine',
     version='1.0a1',
     description="Announcment engine",
     long_description=long_description,
@@ -32,16 +32,16 @@ setup(
     keywords='Python Plone CMS',
     author='roman kysil',
     author_email='roman.kysil@redturtle.it',
-    url='https://github.com/collective/announcment.engine',
+    url='https://github.com/collective/announcement.engine',
     project_urls={
-        'PyPI': 'https://pypi.python.org/pypi/announcment.engine',
-        'Source': 'https://github.com/collective/announcment.engine',
-        'Tracker': 'https://github.com/collective/announcment.engine/issues',
-        # 'Documentation': 'https://announcment.engine.readthedocs.io/en/latest/',
+        'PyPI': 'https://pypi.python.org/pypi/announcement.engine',
+        'Source': 'https://github.com/collective/announcement.engine',
+        'Tracker': 'https://github.com/collective/announcement.engine/issues',
+        # 'Documentation': 'https://announcement.engine.readthedocs.io/en/latest/',
     },
     license='GPL version 2',
     packages=find_packages('src', exclude=['ez_setup']),
-    namespace_packages=['announcment'],
+    namespace_packages=['announcement'],
     package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,
@@ -69,6 +69,6 @@ setup(
     [z3c.autoinclude.plugin]
     target = plone
     [console_scripts]
-    update_locale = announcment.engine.locales.update:update_locale
+    update_locale = announcement.engine.locales.update:update_locale
     """,
 )

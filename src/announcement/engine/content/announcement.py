@@ -1,4 +1,4 @@
-"""Announcment C.T."""
+"""Announcement C.T."""
 from zope import schema
 from zope.interface import implementer
 from plone.supermodel import model
@@ -6,8 +6,8 @@ from plone.namedfile.field import NamedBlobImage
 from plone.app.textfield import RichText
 from plone.dexterity.content import Container
 
-class IAnnouncment(model.Schema):
-    """Announcment C.T. Interface"""
+class IAnnouncement(model.Schema):
+    """Announcement C.T. Interface"""
 
     description = schema.Text(
         title="Description",
@@ -30,11 +30,11 @@ class IAnnouncment(model.Schema):
     )
 
     text = RichText(
-        title="Extended description of announcment",
+        title="Extended description of announcement",
         max_length=1000,
         required=False
     )
 
-@implementer(IAnnouncment)
-class Announcment(Container):
-    """Announcment instance class"""
+@implementer(IAnnouncement)
+class Announcement(Container):
+    """Announcement instance class"""

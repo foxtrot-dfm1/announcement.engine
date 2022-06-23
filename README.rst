@@ -2,30 +2,30 @@
    If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
    This text does not appear on pypi or github. It is a comment.
 
-.. image:: https://travis-ci.org/collective/announcment.engine.svg?branch=master
-    :target: https://travis-ci.org/collective/announcment.engine
+.. image:: https://travis-ci.org/collective/announcement.engine.svg?branch=master
+    :target: https://travis-ci.org/collective/announcement.engine
 
-.. image:: https://coveralls.io/repos/github/collective/announcment.engine/badge.svg?branch=master
-    :target: https://coveralls.io/github/collective/announcment.engine?branch=master
+.. image:: https://coveralls.io/repos/github/collective/announcement.engine/badge.svg?branch=master
+    :target: https://coveralls.io/github/collective/announcement.engine?branch=master
     :alt: Coveralls
 
-.. image:: https://img.shields.io/pypi/v/announcment.engine.svg
-    :target: https://pypi.python.org/pypi/announcment.engine/
+.. image:: https://img.shields.io/pypi/v/announcement.engine.svg
+    :target: https://pypi.python.org/pypi/announcement.engine/
     :alt: Latest Version
 
-.. image:: https://img.shields.io/pypi/status/announcment.engine.svg
-    :target: https://pypi.python.org/pypi/announcment.engine
+.. image:: https://img.shields.io/pypi/status/announcement.engine.svg
+    :target: https://pypi.python.org/pypi/announcement.engine
     :alt: Egg Status
 
-.. image:: https://img.shields.io/pypi/pyversions/announcment.engine.svg?style=plastic   :alt: Supported - Python Versions
+.. image:: https://img.shields.io/pypi/pyversions/announcement.engine.svg?style=plastic   :alt: Supported - Python Versions
 
-.. image:: https://img.shields.io/pypi/l/announcment.engine.svg
-    :target: https://pypi.python.org/pypi/announcment.engine/
+.. image:: https://img.shields.io/pypi/l/announcement.engine.svg
+    :target: https://pypi.python.org/pypi/announcement.engine/
     :alt: License
 
 
 ==================
-announcment.engine
+announcement.engine
 ==================
 
 Tell me what your product does
@@ -60,14 +60,14 @@ This product has been translated into
 Installation
 ------------
 
-Install announcment.engine by adding it to your buildout::
+Install announcement.engine by adding it to your buildout::
 
     [buildout]
 
     ...
 
     eggs =
-        announcment.engine
+        announcement.engine
 
 
 and then running ``bin/buildout``
@@ -76,8 +76,8 @@ and then running ``bin/buildout``
 Contribute
 ----------
 
-- Issue Tracker: https://github.com/collective/announcment.engine/issues
-- Source Code: https://github.com/collective/announcment.engine
+- Issue Tracker: https://github.com/collective/announcement.engine/issues
+- Source Code: https://github.com/collective/announcement.engine
 - Documentation: https://docs.plone.org/foo/bar
 
 
