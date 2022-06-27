@@ -1,9 +1,6 @@
 """Announcement Category C.T."""
-from zope import schema
-from zope.interface import implementer
 from plone.supermodel import model
-from plone.namedfile.field import NamedBlobImage
-from plone.app.textfield import RichText
+from zope.interface import implementer
 from plone.dexterity.content import Container
 
 
