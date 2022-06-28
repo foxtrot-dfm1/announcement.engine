@@ -52,3 +52,24 @@ def noitifyAboutPublishReject(announcement, event):
     msg.replace_header("Content-Type", 'text/html; charset="utf-8"')
 
     send_mail(msg, encoding="utf-8")
+
+
+def notifyAboutAnnouncementCreation(announcement, event):
+    """
+    Event handler notifies about new announcement
+    creation on email indcated in parent annoucement_category
+    """
+    announcement_category = announcement.getParentNode()
+
+    if not announcement_category:
+        return False
+
+    subject = "New announcement"
+    message = f"New announcement was created, is available by: {announcement.absolute_url()}"
+
+    api.portal.send_email(
+        recipient=announcement_category.notification_email,
+        sender=api.portal.get_registry_record('plone.email_from_name'),
+        subject=subject,
+        body=message
+    )

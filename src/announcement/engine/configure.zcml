@@ -17,6 +17,8 @@
   
   <include package=".events" />
 
+  <include package=".events" />
+
   <include file="permissions.zcml" />
 
   <genericsetup:registerProfile

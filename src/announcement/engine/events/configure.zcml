@@ -10,4 +10,10 @@
       handler=".handlers.noitifyAboutPublishReject"
       />
 
-</configure> 
+  <subscriber
+      for="announcement.engine.content.announcement.IAnnouncement
+        zope.lifecycleevent.interfaces.IObjectAddedEvent"
+      handler=".handlers.notifyAboutAnnouncementCreation"
+      />
+
+</configure>
