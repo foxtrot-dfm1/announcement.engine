@@ -10,7 +10,7 @@ class IAnnouncementCategory(model.Schema):
 
     notification_email = Email(
         title="Notification email",
-        required=True
+        required=False
     )
 
 @implementer(IAnnouncementCategory)

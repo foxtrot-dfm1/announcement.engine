@@ -64,11 +64,16 @@ def notifyAboutAnnouncementCreation(announcement, event):
     if not announcement_category:
         return False
 
+    recipient = announcement_category.notification_email
+
+    if not recipient:
+        return False
+
     subject = "New announcement"
     message = f"New announcement was created, is available by: {announcement.absolute_url()}"
 
     api.portal.send_email(
-        recipient=announcement_category.notification_email,
+        recipient=recipient,
         sender=api.portal.get_registry_record('plone.email_from_name'),
         subject=subject,
         body=message
