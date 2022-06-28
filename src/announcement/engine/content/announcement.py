@@ -1,4 +1,5 @@
 """Announcement C.T."""
+from zope import schema
 from zope.interface import implementer
 from plone.supermodel import model
 from plone.dexterity.content import Container
