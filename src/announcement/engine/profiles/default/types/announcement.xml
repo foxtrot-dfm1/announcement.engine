@@ -22,6 +22,8 @@
  <property name="schema">announcement.engine.content.announcement.IAnnouncement</property>
  <property name="behaviors">
   <element value="plone.dublincore"/>
+  <element value="plone.richtext" />
+  <element value="plone.leadimage" />
   <element value="plone.namefromtitle"/>
   <element value="plone.versioning" />
  </property>
