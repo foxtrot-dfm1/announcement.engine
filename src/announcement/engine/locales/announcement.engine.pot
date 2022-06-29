@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-06-29 13:29+0000\n"
+"POT-Creation-Date: 2022-06-29 19:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,11 +38,11 @@ msgstr ""
 msgid "External link"
 msgstr ""
 
-#: announcement/engine/configure.zcml:27
+#: announcement/engine/configure.zcml:29
 msgid "Installs the announcement.engine add-on."
 msgstr ""
 
-#: announcement/engine/configure.zcml:36
+#: announcement/engine/configure.zcml:38
 msgid "Uninstalls the announcement.engine add-on."
 msgstr ""
 
@@ -51,10 +51,28 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-#: announcement/engine/configure.zcml:27
+#: announcement/engine/configure.zcml:29
 msgid "announcement.engine"
 msgstr ""
 
-#: announcement/engine/configure.zcml:36
+#: announcement/engine/configure.zcml:38
 msgid "announcement.engine (uninstall)"
+msgstr ""
+
+#. Default: "Announcement was published, see"
+#: announcement/engine/events/handlers.py:7
+msgid "announcement_publish_message"
+msgstr ""
+
+#. Default: "Announcement was rejected, see"
+#: announcement/engine/events/handlers.py:11
+msgid "announcement_reject_message"
+msgstr ""
+
+#: announcement/engine/events/handlers.py:7
+msgid "publish"
+msgstr ""
+
+#: announcement/engine/events/handlers.py:11
+msgid "reject"
 msgstr ""
