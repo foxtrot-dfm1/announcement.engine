@@ -1,21 +1,5 @@
-# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-<<<<<<< HEAD
-"POT-Creation-Date: 2022-07-05 08:04+0000\n"
-=======
-<<<<<<< HEAD
-"POT-Creation-Date: 2022-06-29 19:00+0000\n"
-=======
-"POT-Creation-Date: 2022-06-29 14:29+0000\n"
->>>>>>> be4574c (Add translatoions)
->>>>>>> 29a046a (Add translatoions)
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -55,12 +39,16 @@ msgstr ""
 msgid "Installs the announcement.engine add-on."
 msgstr ""
 
-#: announcement/engine/events/handlers.py:21
+#: announcement/engine/events/handlers.py:27
 msgid "New announcement"
 msgstr ""
 
-#: announcement/engine/events/handlers.py:22
-msgid "New announcement was created, is available by"
+#: announcement/engine/events/handlers.py:29
+msgid "New announcement was created, is available via"
+msgstr ""
+
+#: announcement/engine/content/announcement_category.py:12
+msgid "Notification email"
 msgstr ""
 
 #: announcement/engine/configure.zcml:38

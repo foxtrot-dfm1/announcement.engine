@@ -53,13 +53,14 @@ def noitifyAboutPublishReject(announcement, event):
 
     send_mail(msg, encoding="utf-8")
 
-
 def notifyAboutAnnouncementCreation(announcement, event):
     """
     Event handler notifies about new announcement
     creation on email indcated in parent annoucement_category
     """
     announcement_category = announcement.getParentNode()
+    lang = api.portal.get_registry_record('plone.default_language')
+    translator = api.portal.get_tool('translation_service')
 
     if not announcement_category:
         return False
@@ -69,10 +70,12 @@ def notifyAboutAnnouncementCreation(announcement, event):
     if not recipient:
         return False
 
-    subject = _("New announcement")
-    message = _("New announcement was created, is available by") \
-        + ' : ' + str(announcement.absolute_url())
+    subject = translator.translate(_("New announcement"), target_language=lang)
+    message = translator.translate(
+        _("New announcement was created, is available via"), target_language=lang
+        ) + ' : ' + str(announcement.absolute_url())
 
+    
     api.portal.send_email(
         recipient=recipient,
         sender=api.portal.get_registry_record('plone.email_from_name'),
