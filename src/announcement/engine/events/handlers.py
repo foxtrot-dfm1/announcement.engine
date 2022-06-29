@@ -69,8 +69,9 @@ def notifyAboutAnnouncementCreation(announcement, event):
     if not recipient:
         return False
 
-    subject = "New announcement"
-    message = f"New announcement was created, is available by: {announcement.absolute_url()}"
+    subject = _("New announcement")
+    message = _("New announcement was created, is available by") \
+        + ' : ' + str(announcement.absolute_url())
 
     api.portal.send_email(
         recipient=recipient,
