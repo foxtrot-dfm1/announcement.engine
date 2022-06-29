@@ -1,7 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2022-07-05 08:04+0000\n"
+=======
+<<<<<<< HEAD
+"POT-Creation-Date: 2022-06-29 19:00+0000\n"
+=======
+"POT-Creation-Date: 2022-06-29 14:29+0000\n"
+>>>>>>> be4574c (Add translatoions)
+>>>>>>> 29a046a (Add translatoions)
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,6 +51,14 @@ msgstr "Link esterno"
 #: announcement/engine/configure.zcml:29
 msgid "Installs the announcement.engine add-on."
 msgstr "Installa prodotto aggiuntivo announcement.engine"
+
+#: announcement/engine/events/handlers.py:21
+msgid "New announcement"
+msgstr "Nuovo annuncio"
+
+#: announcement/engine/events/handlers.py:22
+msgid "New announcement was created, is available by"
+msgstr "Nuovo annuncio è stato creato, è disponibile via"
 
 #: announcement/engine/configure.zcml:38
 msgid "Uninstalls the announcement.engine add-on."
