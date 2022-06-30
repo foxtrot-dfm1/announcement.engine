@@ -1,3 +1,10 @@
-<record name="plone.enable_self_reg">
-  <value>True</value>
-</record>
+<?xml version="1.0"?>
+<registry
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="announcement.engine">
+
+  <record name="plone.enable_self_reg">
+    <value>True</value>
+  </record>
+
+</registry>

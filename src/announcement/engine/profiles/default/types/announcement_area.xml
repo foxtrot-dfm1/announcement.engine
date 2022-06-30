@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <object
-    i18n:domain="plone"
     meta_type="Dexterity FTI"
     name="announcement_category"
-    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="announcement.engine">
 
   <!-- Basic properties -->
   <property
@@ -27,14 +27,13 @@
 
   <!-- Schema, class and security -->
   <property name="add_permission">plone.app.contenttypes.addFolder</property>
-  <property name="klass">plone.app.contenttypes.content.Folder</property>
-  <property name="model_file">announcement.engine.content:announcement_area.xml</property>
-  <property name="model_source"></property>
-  <property name="schema"></property>
+  <property name="klass">announcement.engine.content.announcement_area.AnnouncementArea</property>
+  <property name="schema">announcement.engine.content.announcement_area.IAnnouncementArea</property>
 
   <!-- Enabled behaviors -->
   <property name="behaviors" purge="false">
     <element value="plone.dublincore" />
+    <element value="plone.richtext" />
     <element value="plone.namefromtitle" />
     <element value="plone.allowdiscussion" />
     <element value="plone.excludefromnavigation" />

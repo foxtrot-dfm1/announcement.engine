@@ -1,6 +1,3 @@
-# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -15,41 +12,41 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: announcement.engine\n"
+"Domain: DOMAIN\n"
 
 #: announcement/engine/profiles/default/types/announcement.xml
 msgid "Announcement"
-msgstr ""
+msgstr "Annuncio"
 
 #: announcement/engine/profiles/default/types/announcement_area.xml
 msgid "Announcement area"
-msgstr ""
+msgstr "Area annunci"
 
 #: announcement/engine/profiles/default/types/announcement_category.xml
 msgid "Announcement category"
-msgstr ""
+msgstr "Categoria annunci"
 
 #: announcement/engine/profiles/default/types/announcement_area.xml
 #: announcement/engine/profiles/default/types/announcement_category.xml
 msgid "Edit"
-msgstr ""
+msgstr "Modifica"
 
 #: announcement/engine/content/announcement.py:13
 msgid "External link"
-msgstr ""
+msgstr "Link esterno"
 
 #: announcement/engine/configure.zcml:27
 msgid "Installs the announcement.engine add-on."
-msgstr ""
+msgstr "Installa prodotto aggiuntivo announcement.engine"
 
 #: announcement/engine/configure.zcml:36
 msgid "Uninstalls the announcement.engine add-on."
-msgstr ""
+msgstr "Disinstalla prodotto aggiuntivo announcement.engine"
 
 #: announcement/engine/profiles/default/types/announcement_area.xml
 #: announcement/engine/profiles/default/types/announcement_category.xml
 msgid "View"
-msgstr ""
+msgstr "Mostra"
 
 #: announcement/engine/configure.zcml:27
 msgid "announcement.engine"
@@ -57,4 +54,4 @@ msgstr ""
 
 #: announcement/engine/configure.zcml:36
 msgid "announcement.engine (uninstall)"
-msgstr ""
+msgstr "announcement.engin (disinstalla)"
