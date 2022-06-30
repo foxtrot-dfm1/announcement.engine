@@ -1,6 +1,7 @@
 //logic of querying <announcement> portal type items via restapi
 
 const SEARCH_QUERY_TEMPLATE = {
+    "language": 'it',
     "query": [
       {
         "i": "portal_type",
@@ -51,21 +52,19 @@ function print_result_list(result){
     let conteiner = $('#container_announcements');
     if (result['items_total'] > 0){
         for(let i = 0; i < result['items_total']; i++){
-            conteiner.append($(`
-                <div class="row pt-1">
-                    <div class="card w-100">
-                        <div class="card-header">
-                        ${result['items'][i]['review_state']}
-                        </div>
-                        <div class="card-body">
-                        <h5 class="card-title">${result['items'][i]['title']}</h5>
-                        <p class="card-text">${result['items'][i]['description']}</p>
-                        <a href="${result['items'][i]['@id']}" class="btn btn-primary">View</a>
-                        </div>
-                    </div>
+            let announcement = $('#announcement_row_card_tmp').clone();
             
-                </div>
-            `));
+            // populate fields
+            announcement.find('.card-header')[0].innerHTML = result['items'][i]['review_state'];
+            announcement.find('.card-title')[0].innerHTML = result['items'][i]['title'];
+            announcement.find('.card-text')[0].innerHTML = result['items'][i]['description'];
+            announcement.find('a').href = result['items'][i]['@id'];
+            
+            announcement.attr('id', '');
+            announcement.css('display', 'flex');
+
+            
+            conteiner.append(announcement);
         }
     }
 }

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-06-29 13:29+0000\n"
+"POT-Creation-Date: 2022-06-30 08:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,10 +39,15 @@ msgstr "Link esterno"
 msgid "Installs the announcement.engine add-on."
 msgstr "Installa prodotto aggiuntivo announcement.engine"
 
+#: announcement/engine/browser/templates/announcement_search.pt:38
+msgid "Search"
+msgstr "Cerca"
+
 #: announcement/engine/configure.zcml:36
 msgid "Uninstalls the announcement.engine add-on."
 msgstr "Disinstalla prodotto aggiuntivo announcement.engine"
 
+#: announcement/engine/browser/templates/announcement_search.pt:58
 #: announcement/engine/profiles/default/types/announcement_area.xml
 #: announcement/engine/profiles/default/types/announcement_category.xml
 msgid "View"
@@ -55,3 +60,13 @@ msgstr ""
 #: announcement/engine/configure.zcml:36
 msgid "announcement.engine (uninstall)"
 msgstr "announcement.engin (disinstalla)"
+
+#. Default: "Search Site"
+#: announcement/engine/browser/templates/announcement_search.pt:29
+msgid "placeholder_search_placeholder"
+msgstr "Cerca nel sito"
+
+#. Default: "Search Site"
+#: announcement/engine/browser/templates/announcement_search.pt:29
+msgid "title_search_title"
+msgstr "Cerca nel sito"

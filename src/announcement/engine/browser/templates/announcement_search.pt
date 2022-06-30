@@ -4,7 +4,7 @@
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     lang="en"
     metal:use-macro="context/main_template/macros/master"
-    i18n:domain="plone">
+    i18n:domain="announcement.engine">
 
 <head>
     <metal:block metal:fill-slot="head_slot">
@@ -17,35 +17,50 @@
 </head>
 <body>
 
-<metal:content-core fill-slot="main">
-    
-    <form name="announcement_search_form"
-          id="announcement_search_form"
-          role="search"
-          class="pat-formautofocus announcement_search"
-          >
+    <metal:content-core fill-slot="main">
+        
+        <form name="announcement_search_form"
+            id="announcement_search_form"
+            role="search"
+            class="pat-formautofocus announcement_search"
+            >
 
-        <div class="input-group">
-          <input class="searchPage form-control"
-                 name="SearchableText"
-                 type="text"
-                 size="25"
-                 title="Search Site"
-                 i18n:attributes="title title_search_title;"
-                 />
-          <span class="input-group-btn">
-            <input class="searchPage allowMultiSubmit btn btn-primary" type="submit"
-                   value="Search"
-                   id="announcement_search_submit"
-                   >
-          </span>
+            <div class="input-group">
+            <input class="searchPage form-control"
+                    name="SearchableText"
+                    type="text"
+                    size="25"
+                    title="Search Site"
+                    placeholder="Search Site"
+                    i18n:attributes="title title_search_title; placeholder placeholder_search_placeholder"
+                    />
+            <span class="input-group-btn">
+                <input class="searchPage allowMultiSubmit btn btn-primary" type="submit"
+                    value="Search"
+                    id="announcement_search_submit"
+                    i18n:attributes="value"
+                    >
+            </span>
+            </div>
+        </form>
+        <div class="container pt-5" id="container_announcements"></div>
+
+    <script type="text/javascript"
+        tal:attributes="src string:${portal_url}/++plone++announcement.engine.static/announcement_search.js">
+    </script>
+
+    <div class="row pt-1" style="display: none;" id="announcement_row_card_tmp">
+        <div class="card w-100">
+            <div class="card-header"></div>
+            <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <a href="" class="btn btn-primary" i18n:translate="">View</a>
+            </div>
         </div>
-    </form>
-    <div class="container pt-5" id="container_announcements"></div>
-
-<script type="text/javascript"
-    tal:attributes="src string:${portal_url}/++plone++announcement.engine.static/announcement_search.js">
-</script>
-</metal:content-core>
+            
+    </div>
+    
+    </metal:content-core>
 </body>
 </html>
