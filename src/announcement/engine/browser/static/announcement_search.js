@@ -1,41 +1,20 @@
-//logic of querying <announcement> portal type items via restapi
+//Logic of querying <announcement> portal type items via @search
 
-const SEARCH_QUERY_TEMPLATE = {
-    "language": 'it',
-    "query": [
-      {
-        "i": "portal_type",
-        "o": "plone.app.querystring.operation.selection.any",
-        "v": [
-          "announcement"
-        ]
-      },
-      {
-        "i":"SearchableText",
-        "o":"plone.app.querystring.operation.string.contains",
-        "v": null
-      }
-    ]
-};
-
-const SEARCH_URL = location.origin + '/' + location.pathname.split('/')[1] + '/@querystring-search';
+const QUERY_TEMP_VAR = '%query_text%'
+const SEARCH_QUERY_TEMPLATE = "SearchableText=" + QUERY_TEMP_VAR + "&portal_type=announcement";
+const SEARCH_URL = PORTAL_URL + '/@search';
 
 
 function executeSearchRequest(searchableText){
-    let requests_structure = {
-        ...SEARCH_QUERY_TEMPLATE
-    };
-
-    requests_structure['query'][1]['v'] = searchableText;
+    let request_query = SEARCH_QUERY_TEMPLATE.replace(
+        QUERY_TEMP_VAR, encodeURI(searchableText));
 
     purge_result_list();
 
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: SEARCH_URL,
-        data: JSON.stringify(requests_structure),
-        contentType: 'application/json;',
-        dataType: 'json',
+        data: request_query,
         headers: {
             'Accept': 'application/json'
         },
@@ -58,7 +37,9 @@ function print_result_list(result){
             announcement.find('.card-header')[0].innerHTML = result['items'][i]['review_state'];
             announcement.find('.card-title')[0].innerHTML = result['items'][i]['title'];
             announcement.find('.card-text')[0].innerHTML = result['items'][i]['description'];
-            announcement.find('a').href = result['items'][i]['@id'];
+            announcement.find('a')[0].href = result['items'][i]['@id'];
+
+            console.log(result['items'][i]['@id']);
             
             announcement.attr('id', '');
             announcement.css('display', 'flex');
