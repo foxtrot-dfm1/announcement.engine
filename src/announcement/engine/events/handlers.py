@@ -1,18 +1,11 @@
 """event handlers for announcmeent.engine package"""
 
 from plone import api
+from email.message import EmailMessage
 from announcement.engine import _
 
-ANNOUNCEMENT_TRANSITION_MSG_MAP = {
-    _('publish'): _(
-        'announcement_publish_message',
-        default="Announcement was published, see"
-        ),
-    _('reject'): _(
-        'announcement_reject_message',
-        default="Announcement was rejected, see"
-        ) 
-}
+from .contrib.mail import send_mail
+
 
 def noitifyAboutPublishReject(announcement, event):
     """
@@ -22,29 +15,40 @@ def noitifyAboutPublishReject(announcement, event):
     lang = api.portal.get_registry_record('plone.default_language')
     translator = api.portal.get_tool('translation_service')
 
-    if transition_id not in (ANNOUNCEMENT_TRANSITION_MSG_MAP.keys()):
-        return False
+    #  data checks for email sending
+    if transition_id not in (_('publish'), _('reject')):
+        return
 
-    recipient = api.user.get(
+    owner = api.user.get(
         userid=announcement.getOwner().getId()
-        ).getProperty('email')
+        )
     
-    if not recipient:
-        return False
+    if not owner:
+        return
+    
+    recipient = owner.getProperty('email')
 
-    # If u have any idea how to refactor this, text me <kysilroman99@gmail.com> ☃
+    if not recipient:
+        return
+
+    # compose message contents
     subject = f"""{announcement.title} ::> {translator.translate(
             _(transition_id), target_language=lang, default=f"{transition_id + 'ed'}"
         )}"""
 
-    message = f"""{translator.translate(
-            ANNOUNCEMENT_TRANSITION_MSG_MAP[transition_id],
-            target_language=lang
-        )} : {announcement.absolute_url()}"""
+    body= api.content.get_view(
+            name="announcement_transition_template",
+            context=announcement,
+            request=announcement.REQUEST,
+        )(announcement=announcement, action=transition_id)
 
-    api.portal.send_email(
-        recipient=recipient,
-        sender=api.portal.get_registry_record('plone.email_from_name'),
-        subject=subject,
-        body=message
-    )
+    # compose smtp message
+    msg = EmailMessage()
+    msg.set_content(body)
+    msg["Subject"] = subject
+    msg["From"] = api.portal.get_registry_record('plone.email_from_name')
+    msg["To"] = recipient
+
+    msg.replace_header("Content-Type", 'text/html; charset="utf-8"')
+
+    send_mail(msg, encoding="utf-8")
