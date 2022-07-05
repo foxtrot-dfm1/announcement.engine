@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-06-29 19:00+0000\n"
+"POT-Creation-Date: 2022-07-05 08:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,6 +14,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
+#: announcement/engine/browser/templates/announcement_transition_template.pt:9
 #: announcement/engine/profiles/default/types/announcement.xml
 msgid "Announcement"
 msgstr "Annuncio"
@@ -25,6 +26,10 @@ msgstr "Area annunci"
 #: announcement/engine/profiles/default/types/announcement_category.xml
 msgid "Announcement category"
 msgstr "Categoria annunci"
+
+#: announcement/engine/browser/templates/announcement_transition_template.pt:21
+msgid "Details are available via:"
+msgstr "Dettaglio è disponibile via:"
 
 #: announcement/engine/profiles/default/types/announcement_area.xml
 #: announcement/engine/profiles/default/types/announcement_category.xml
@@ -50,26 +55,28 @@ msgstr "Mostra"
 
 #: announcement/engine/configure.zcml:29
 msgid "announcement.engine"
-msgstr ""
+msgstr "Motore annunci"
 
 #: announcement/engine/configure.zcml:38
 msgid "announcement.engine (uninstall)"
 msgstr "announcement.engine (disinstalla)"
 
-#. Default: "Announcement was published, see"
-#: announcement/engine/events/handlers.py:7
-msgid "announcement_publish_message"
-msgstr "Annuncio è stato pubblicato"
-
-#. Default: "Announcement was rejected, see"
-#: announcement/engine/events/handlers.py:11
-msgid "announcement_reject_message"
-msgstr "Annuncio è stato respinto"
-
-#: announcement/engine/events/handlers.py:7
+#: announcement/engine/events/handlers.py:19
 msgid "publish"
 msgstr "pubblicato"
 
-#: announcement/engine/events/handlers.py:11
+#: announcement/engine/browser/templates/announcement_transition_template.pt:16
+msgid "published"
+msgstr "pubblicato"
+
+#: announcement/engine/events/handlers.py:19
 msgid "reject"
 msgstr "respinto"
+
+#: announcement/engine/browser/templates/announcement_transition_template.pt:13
+msgid "rejected"
+msgstr "respinto"
+
+#: announcement/engine/browser/templates/announcement_transition_template.pt:11
+msgid "was"
+msgstr "è stato"

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-06-29 19:00+0000\n"
+"POT-Creation-Date: 2022-07-05 08:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: announcement.engine\n"
 
+#: announcement/engine/browser/templates/announcement_transition_template.pt:9
 #: announcement/engine/profiles/default/types/announcement.xml
 msgid "Announcement"
 msgstr ""
@@ -27,6 +28,10 @@ msgstr ""
 
 #: announcement/engine/profiles/default/types/announcement_category.xml
 msgid "Announcement category"
+msgstr ""
+
+#: announcement/engine/browser/templates/announcement_transition_template.pt:21
+msgid "Details are available via:"
 msgstr ""
 
 #: announcement/engine/profiles/default/types/announcement_area.xml
@@ -59,20 +64,22 @@ msgstr ""
 msgid "announcement.engine (uninstall)"
 msgstr ""
 
-#. Default: "Announcement was published, see"
-#: announcement/engine/events/handlers.py:7
-msgid "announcement_publish_message"
-msgstr ""
-
-#. Default: "Announcement was rejected, see"
-#: announcement/engine/events/handlers.py:11
-msgid "announcement_reject_message"
-msgstr ""
-
-#: announcement/engine/events/handlers.py:7
+#: announcement/engine/events/handlers.py:19
 msgid "publish"
 msgstr ""
 
-#: announcement/engine/events/handlers.py:11
+#: announcement/engine/browser/templates/announcement_transition_template.pt:16
+msgid "published"
+msgstr ""
+
+#: announcement/engine/events/handlers.py:19
 msgid "reject"
+msgstr ""
+
+#: announcement/engine/browser/templates/announcement_transition_template.pt:13
+msgid "rejected"
+msgstr ""
+
+#: announcement/engine/browser/templates/announcement_transition_template.pt:11
+msgid "was"
 msgstr ""
