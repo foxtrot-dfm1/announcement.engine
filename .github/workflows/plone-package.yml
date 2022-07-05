@@ -5,10 +5,9 @@ name: Plone package
 
 on:
     push:
-        branches: ['*']
+        branches: '*'
     pull_request:
-        types:
-          - closed
+        branches: [main]
 
 jobs:
     build:
