@@ -36,7 +36,7 @@ def noitifyAboutPublishReject(announcement, event):
             _(transition_id), target_language=lang, default=f"{transition_id + 'ed'}"
         )}"""
 
-    body= api.content.get_view(
+    body = api.content.get_view(
             name="announcement_transition_template",
             context=announcement,
             request=announcement.REQUEST,
