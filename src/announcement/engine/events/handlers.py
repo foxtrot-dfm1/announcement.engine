@@ -63,22 +63,28 @@ def notifyAboutAnnouncementCreation(announcement, event):
     translator = api.portal.get_tool('translation_service')
 
     if not announcement_category:
-        return False
+        return
 
     recipient = announcement_category.notification_email
 
     if not recipient:
-        return False
-
-    subject = translator.translate(_("New announcement"), target_language=lang)
-    message = translator.translate(
-        _("New announcement was created, is available via"), target_language=lang
-        ) + ' : ' + str(announcement.absolute_url())
+        return
 
     
-    api.portal.send_email(
-        recipient=recipient,
-        sender=api.portal.get_registry_record('plone.email_from_name'),
-        subject=subject,
-        body=message
-    )
+    subject = translator.translate(_("New announcement"), target_language=lang)
+    body= api.content.get_view(
+            name="announcement_creation_template",
+            context=announcement,
+            request=announcement.REQUEST,
+        )(announcement=announcement)
+
+    # compose smtp message
+    msg = EmailMessage()
+    msg.set_content(body)
+    msg["Subject"] = subject
+    msg["From"] = api.portal.get_registry_record('plone.email_from_name')
+    msg["To"] = recipient
+
+    msg.replace_header("Content-Type", 'text/html; charset="utf-8"')
+
+    send_mail(msg, encoding="utf-8")

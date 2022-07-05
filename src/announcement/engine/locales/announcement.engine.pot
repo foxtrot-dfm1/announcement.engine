@@ -35,23 +35,20 @@ msgstr ""
 msgid "External link"
 msgstr ""
 
-#: announcement/engine/configure.zcml:29
+#: announcement/engine/configure.zcml:31
 msgid "Installs the announcement.engine add-on."
 msgstr ""
 
-#: announcement/engine/events/handlers.py:27
+#: announcement/engine/browser/templates/announcement_creation_template.pt:5
+#: announcement/engine/events/handlers.py:74
 msgid "New announcement"
-msgstr ""
-
-#: announcement/engine/events/handlers.py:29
-msgid "New announcement was created, is available via"
 msgstr ""
 
 #: announcement/engine/content/announcement_category.py:12
 msgid "Notification email"
 msgstr ""
 
-#: announcement/engine/configure.zcml:38
+#: announcement/engine/configure.zcml:40
 msgid "Uninstalls the announcement.engine add-on."
 msgstr ""
 
@@ -60,11 +57,11 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-#: announcement/engine/configure.zcml:29
+#: announcement/engine/configure.zcml:31
 msgid "announcement.engine"
 msgstr ""
 
-#: announcement/engine/configure.zcml:38
+#: announcement/engine/configure.zcml:40
 msgid "announcement.engine (uninstall)"
 msgstr ""
 
