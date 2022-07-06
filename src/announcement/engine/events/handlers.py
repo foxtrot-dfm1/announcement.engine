@@ -46,7 +46,7 @@ def noitifyAboutPublishReject(announcement, event):
     msg = EmailMessage()
     msg.set_content(body)
     msg["Subject"] = subject
-    msg["From"] = api.portal.get_registry_record('plone.email_from_name')
+    msg["From"] = api.portal.get_registry_record('plone.email_from_address')
     msg["To"] = recipient
 
     msg.replace_header("Content-Type", 'text/html; charset="utf-8"')
@@ -58,11 +58,12 @@ def notifyAboutAnnouncementCreation(announcement, event):
     Event handler notifies about new announcement
     creation on email indcated in parent annoucement_category
     """
-    announcement_category = announcement.getParentNode()
     lang = api.portal.get_registry_record('plone.default_language')
     translator = api.portal.get_tool('translation_service')
+    announcement_category = announcement.getParentNode()
 
-    if not announcement_category:
+    if not announcement_category \
+        or announcement_category.portal_type != 'announcement_category':
         return
 
     recipient = announcement_category.notification_email
@@ -70,7 +71,6 @@ def notifyAboutAnnouncementCreation(announcement, event):
     if not recipient:
         return
 
-    
     subject = translator.translate(_("New announcement"), target_language=lang)
     body= api.content.get_view(
             name="announcement_creation_template",
@@ -82,7 +82,7 @@ def notifyAboutAnnouncementCreation(announcement, event):
     msg = EmailMessage()
     msg.set_content(body)
     msg["Subject"] = subject
-    msg["From"] = api.portal.get_registry_record('plone.email_from_name')
+    msg["From"] = api.portal.get_registry_record('plone.email_from_address')
     msg["To"] = recipient
 
     msg.replace_header("Content-Type", 'text/html; charset="utf-8"')
