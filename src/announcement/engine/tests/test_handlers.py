@@ -5,10 +5,8 @@ from email import message_from_string
 #Plone
 from plone import api
 from plone.registry.interfaces import IRegistry
-from plone.app.testing import TEST_USER_NAME, TEST_USER_ID
-from plone.app.testing import login, logout
+from plone.app.testing import TEST_USER_ID
 from plone.app.testing import setRoles
-from plone.testing.z2 import Browser
 
 from zope.component import getUtility
 
@@ -36,12 +34,9 @@ class TestNotifyAboutAnnouncementCreation(unittest.TestCase):
         self.registry["plone.email_from_address"] = "site_addr@plone.com"
         self.registry["plone.email_from_name"] = "Plone test site"
 
-
         sm = getSiteManager(context=self.portal)
         sm.unregisterUtility(provided=IMailHost)
         sm.registerUtility(mailhost, provided=IMailHost)
-
-        self.portal.email_from_address = 'test@test.test'
 
         transaction.commit()
 
