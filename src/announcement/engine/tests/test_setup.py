@@ -42,8 +42,6 @@ class TestSetup(unittest.TestCase):
             IAnnouncementEngineLayer,
             utils.registered_layers())
 
-        self.assertTrue(False)
-
 
 class TestUninstall(unittest.TestCase):
 
