@@ -33,7 +33,7 @@ def noitifyAboutPublishReject(announcement, event):
 
     # compose message contents
     subject = f"""{announcement.title} ::> {translator.translate(
-            _(transition_id), target_language=lang, default=f"{transition_id + 'ed'}"
+            _(transition_id + 'ed'), target_language=lang
         )}"""
 
     body = api.content.get_view(
@@ -46,7 +46,7 @@ def noitifyAboutPublishReject(announcement, event):
     msg = EmailMessage()
     msg.set_content(body)
     msg["Subject"] = subject
-    msg["From"] = api.portal.get_registry_record('plone.email_from_name')
+    msg["From"] = api.portal.get_registry_record('plone.email_from_address')
     msg["To"] = recipient
 
     msg.replace_header("Content-Type", 'text/html; charset="utf-8"')
