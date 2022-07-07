@@ -13,9 +13,16 @@
 
   <!-- Publish static files -->
   <plone:static
-      name="announcement.engine"
+      name="announcement.engine.static"
       type="plone"
       directory="static"
       />
+
+  <browser:page
+     name="announcement_search"
+     for="*"
+     template="templates/announcement_search.pt"
+     permission="zope2.View"
+     />
 
 </configure>
