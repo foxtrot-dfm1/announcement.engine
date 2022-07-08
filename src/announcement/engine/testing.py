@@ -28,24 +28,24 @@ class AnnouncementEngineLayer(PloneSandboxLayer):
         applyProfile(portal, 'announcement.engine:default')
 
 
-ANNOUNCEMEMNT_ENGINE_FIXTURE = AnnouncementEngineLayer()
+ANNOUNCEMENT_ENGINE_FIXTURE = AnnouncementEngineLayer()
 
 
-ANNOUNCEMEMNT_ENGINE_INTEGRATION_TESTING = IntegrationTesting(
-    bases=(ANNOUNCEMEMNT_ENGINE_FIXTURE,),
+ANNOUNCEMENT_ENGINE_INTEGRATION_TESTING = IntegrationTesting(
+    bases=(ANNOUNCEMENT_ENGINE_FIXTURE,),
     name='AnnouncementEngineLayer:IntegrationTesting',
 )
 
 
-ANNOUNCEMEMNT_ENGINE_FUNCTIONAL_TESTING = FunctionalTesting(
-    bases=(ANNOUNCEMEMNT_ENGINE_FIXTURE,),
+ANNOUNCEMENT_ENGINE_FUNCTIONAL_TESTING = FunctionalTesting(
+    bases=(ANNOUNCEMENT_ENGINE_FIXTURE,),
     name='AnnouncementEngineLayer:FunctionalTesting',
 )
 
 
-ANNOUNCEMEMNT_ENGINE_ACCEPTANCE_TESTING = FunctionalTesting(
+ANNOUNCEMENT_ENGINE_ACCEPTANCE_TESTING = FunctionalTesting(
     bases=(
-        ANNOUNCEMEMNT_ENGINE_FIXTURE,
+        ANNOUNCEMENT_ENGINE_FIXTURE,
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
         z2.ZSERVER_FIXTURE,
     ),
