@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
 from announcement.engine.testing import (
-    ANNOUNCEMEMNT_ENGINE_INTEGRATION_TESTING  # noqa: E501,
+    ANNOUNCEMENT_ENGINE_INTEGRATION_TESTING  # noqa: E501,
 )
 from plone import api
 from plone.app.testing import setRoles, TEST_USER_ID
@@ -18,7 +18,7 @@ except ImportError:
 class TestSetup(unittest.TestCase):
     """Test that announcement.engine is properly installed."""
 
-    layer = ANNOUNCEMEMNT_ENGINE_INTEGRATION_TESTING
+    layer = ANNOUNCEMENT_ENGINE_INTEGRATION_TESTING
 
     def setUp(self):
         """Custom shared utility setup for tests."""
@@ -45,7 +45,7 @@ class TestSetup(unittest.TestCase):
 
 class TestUninstall(unittest.TestCase):
 
-    layer = ANNOUNCEMEMNT_ENGINE_INTEGRATION_TESTING
+    layer = ANNOUNCEMENT_ENGINE_INTEGRATION_TESTING
 
     def setUp(self):
         self.portal = self.layer['portal']

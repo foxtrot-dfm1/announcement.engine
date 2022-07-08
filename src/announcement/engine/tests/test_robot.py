@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from announcement.engine.testing import (
-    ANNOUNCEMEMNT_ENGINE_ACCEPTANCE_TESTING  # noqa: E501,
+    ANNOUNCEMENT_ENGINE_ACCEPTANCE_TESTING  # noqa: E501,
 )
 from plone.app.testing import ROBOT_TEST_LEVEL
 from plone.testing import layered
@@ -24,7 +24,7 @@ def test_suite():
         suite.addTests([
             layered(
                 robottestsuite,
-                layer=ANNOUNCEMEMNT_ENGINE_ACCEPTANCE_TESTING,
+                layer=ANNOUNCEMENT_ENGINE_ACCEPTANCE_TESTING,
             ),
         ])
     return suite

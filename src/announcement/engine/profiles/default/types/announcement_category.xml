@@ -14,7 +14,7 @@
       name="description"></property>
 
   <property name="allow_discussion">False</property>
-  <property name="factory">Folder</property>
+  <property name="factory">announcement_category</property>
   <property name="icon_expr">string:++plone++bootstrap-icons/folder.svg</property>
   <property name="link_target"></property>
 
@@ -23,10 +23,10 @@
     <element value="announcement"/>
   </property>
   <property name="filter_content_types">True</property>
-  <property name="global_allow">True</property>
+  <property name="global_allow">False</property>
 
   <!-- Schema, class and security -->
-  <property name="add_permission">plone.app.contenttypes.addFolder</property>
+  <property name="add_permission">cmf.ManagePortal</property>
   <property name="klass">announcement.engine.content.announcement_category.AnnouncementCategory</property>
   <property name="schema">announcement.engine.content.announcement_category.IAnnouncementCategory</property>
 
