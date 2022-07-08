@@ -1,0 +1,23 @@
+<tal:root xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="announcement.engine"
+    define="
+            announcement python:options.get('announcement', '');
+            action python:options.get('action', '')">
+    >
+
+    <h2>
+      <span i18n:translate="">Announcement</span> "
+      <span tal:replace="python:announcement.title"/>" 
+            <span i18n:translate="">was</span>
+            <span tal:condition="python: action == 'reject'">
+              <span i18n:translate="">rejected</span>
+            </span>
+            <span tal:condition="python: action == 'publish'">
+              <span i18n:translate="">published</span>
+            </span>
+    </h2>
+    <br>
+    <p>
+      <span i18n:translate="">Details are available via:</span> <span tal:replace="announcement/absolute_url"/>
+    </p>
+</tal:root>

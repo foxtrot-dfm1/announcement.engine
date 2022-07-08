@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-06-29 13:29+0000\n"
+"POT-Creation-Date: 2022-07-05 08:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,6 +14,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
+#: announcement/engine/browser/templates/announcement_transition_template.pt:9
 #: announcement/engine/profiles/default/types/announcement.xml
 msgid "Announcement"
 msgstr "Annuncio"
@@ -26,6 +27,10 @@ msgstr "Area annunci"
 msgid "Announcement category"
 msgstr "Categoria annunci"
 
+#: announcement/engine/browser/templates/announcement_transition_template.pt:21
+msgid "Details are available via:"
+msgstr "Dettaglio è disponibile via:"
+
 #: announcement/engine/profiles/default/types/announcement_area.xml
 #: announcement/engine/profiles/default/types/announcement_category.xml
 msgid "Edit"
@@ -35,11 +40,11 @@ msgstr "Modifica"
 msgid "External link"
 msgstr "Link esterno"
 
-#: announcement/engine/configure.zcml:27
+#: announcement/engine/configure.zcml:29
 msgid "Installs the announcement.engine add-on."
 msgstr "Installa prodotto aggiuntivo announcement.engine"
 
-#: announcement/engine/configure.zcml:36
+#: announcement/engine/configure.zcml:38
 msgid "Uninstalls the announcement.engine add-on."
 msgstr "Disinstalla prodotto aggiuntivo announcement.engine"
 
@@ -48,10 +53,30 @@ msgstr "Disinstalla prodotto aggiuntivo announcement.engine"
 msgid "View"
 msgstr "Mostra"
 
-#: announcement/engine/configure.zcml:27
+#: announcement/engine/configure.zcml:29
 msgid "announcement.engine"
-msgstr ""
+msgstr "Motore annunci"
 
-#: announcement/engine/configure.zcml:36
+#: announcement/engine/configure.zcml:38
 msgid "announcement.engine (uninstall)"
-msgstr "announcement.engin (disinstalla)"
+msgstr "announcement.engine (disinstalla)"
+
+#: announcement/engine/events/handlers.py:19
+msgid "publish"
+msgstr "pubblicato"
+
+#: announcement/engine/browser/templates/announcement_transition_template.pt:16
+msgid "published"
+msgstr "pubblicato"
+
+#: announcement/engine/events/handlers.py:19
+msgid "reject"
+msgstr "respinto"
+
+#: announcement/engine/browser/templates/announcement_transition_template.pt:13
+msgid "rejected"
+msgstr "respinto"
+
+#: announcement/engine/browser/templates/announcement_transition_template.pt:11
+msgid "was"
+msgstr "è stato"
