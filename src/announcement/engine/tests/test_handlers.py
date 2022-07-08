@@ -18,11 +18,11 @@ from Products.MailHost.interfaces import IMailHost
 import transaction
 
 from announcement.engine.testing import \
-    ANNOUNCEMEMNT_ENGINE_FUNCTIONAL_TESTING
+    ANNOUNCEMENT_ENGINE_FUNCTIONAL_TESTING
 
 
 class TestNotifyAboutPublishReject(unittest.TestCase):
-    layer = ANNOUNCEMEMNT_ENGINE_FUNCTIONAL_TESTING
+    layer = ANNOUNCEMENT_ENGINE_FUNCTIONAL_TESTING
 
     def setUp(self):
         self.app = self.layer['app']
