@@ -10,7 +10,7 @@
 #
 # 1) Start robot server:
 #
-# $ bin/robot-server --reload-path src announcement.engine.testing.ANNOUNCEMEMNT_ENGINE_ACCEPTANCE_TESTING
+# $ bin/robot-server --reload-path src announcement.engine.testing.ANNOUNCEMENT_ENGINE_ACCEPTANCE_TESTING
 #
 # 2) Run robot tests:
 #

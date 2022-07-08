@@ -14,6 +14,10 @@
   <!--<includeDependencies package="." />-->
 
   <include package=".browser" />
+  
+  <include package=".events" />
+
+  <include package=".events" />
 
   <include file="permissions.zcml" />
 

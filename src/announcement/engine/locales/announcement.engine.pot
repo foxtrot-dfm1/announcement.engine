@@ -1,13 +1,5 @@
-# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-06-29 13:29+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +9,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: announcement.engine\n"
 
+#: announcement/engine/browser/templates/announcement_transition_template.pt:9
 #: announcement/engine/profiles/default/types/announcement.xml
 msgid "Announcement"
 msgstr ""
@@ -29,6 +22,10 @@ msgstr ""
 msgid "Announcement category"
 msgstr ""
 
+#: announcement/engine/browser/templates/announcement_transition_template.pt:21
+msgid "Details are available via:"
+msgstr ""
+
 #: announcement/engine/profiles/default/types/announcement_area.xml
 #: announcement/engine/profiles/default/types/announcement_category.xml
 msgid "Edit"
@@ -38,11 +35,20 @@ msgstr ""
 msgid "External link"
 msgstr ""
 
-#: announcement/engine/configure.zcml:27
+#: announcement/engine/configure.zcml:31
 msgid "Installs the announcement.engine add-on."
 msgstr ""
 
-#: announcement/engine/configure.zcml:36
+#: announcement/engine/browser/templates/announcement_creation_template.pt:5
+#: announcement/engine/events/handlers.py:74
+msgid "New announcement"
+msgstr ""
+
+#: announcement/engine/content/announcement_category.py:12
+msgid "Notification email"
+msgstr ""
+
+#: announcement/engine/configure.zcml:40
 msgid "Uninstalls the announcement.engine add-on."
 msgstr ""
 
@@ -51,10 +57,30 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-#: announcement/engine/configure.zcml:27
+#: announcement/engine/configure.zcml:31
 msgid "announcement.engine"
 msgstr ""
 
-#: announcement/engine/configure.zcml:36
+#: announcement/engine/configure.zcml:40
 msgid "announcement.engine (uninstall)"
+msgstr ""
+
+#: announcement/engine/events/handlers.py:19
+msgid "publish"
+msgstr ""
+
+#: announcement/engine/browser/templates/announcement_transition_template.pt:16
+msgid "published"
+msgstr ""
+
+#: announcement/engine/events/handlers.py:19
+msgid "reject"
+msgstr ""
+
+#: announcement/engine/browser/templates/announcement_transition_template.pt:13
+msgid "rejected"
+msgstr ""
+
+#: announcement/engine/browser/templates/announcement_transition_template.pt:11
+msgid "was"
 msgstr ""

@@ -17,5 +17,18 @@
       type="plone"
       directory="static"
       />
+  
+  <browser:page
+        for="*"
+        name="announcement_transition_template"
+        template="templates/announcement_transition_template.pt"
+        permission="zope2.View"
+        />
 
+  <browser:page
+        for="*"
+        name="announcement_creation_template"
+        template="templates/announcement_creation_template.pt"
+        permission="zope2.View"
+        />
 </configure>
