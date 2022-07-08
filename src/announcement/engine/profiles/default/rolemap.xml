@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <rolemap>
+  <roles>
+    <role name="Gestore annunci" />
+  </roles>
   <permissions>
-  <!-- -*- extra stuff goes here -*- -->
-
   </permissions>
 </rolemap>

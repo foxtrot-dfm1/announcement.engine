@@ -15,7 +15,7 @@ long_description = '\n\n'.join([
 setup(
     name='announcement.engine',
     version='1.0a1',
-    description="Announcment engine",
+    description="Announcement engine",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
     classifiers=[

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object name="portal_workflow" meta_type="Plone Workflow Tool">
+ <property
+    name="title">Contains workflow definitions for your portal</property>
+ <object name="announcement_workflow" meta_type="Workflow" />
+ <object name="announcement_category_workflow" meta_type="Workflow" />
+ <bindings>
+  <type type_id="announcement">
+      <bound-workflow workflow_id="announcement_workflow" />
+  </type>
+  <type type_id="announcement_category">
+      <bound-workflow workflow_id="announcement_category_workflow" />
+  </type>
+ </bindings>
+</object>
