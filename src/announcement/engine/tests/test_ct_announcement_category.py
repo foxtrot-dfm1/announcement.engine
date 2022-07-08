@@ -8,6 +8,7 @@ from plone.api.exc import InvalidParameterError
 from plone.app.testing import setRoles, TEST_USER_ID
 from plone.dexterity.interfaces import IDexterityFTI
 from zope.component import createObject, queryUtility
+from zExceptions.unauthorized import Unauthorized
 
 import unittest
 
@@ -71,6 +72,16 @@ class TestAnnouncementCategoryIntegrationTest(unittest.TestCase):
         # check that deleting the object works too
         api.content.delete(obj=obj)
         self.assertNotIn('announcement_category', parent.objectIds())
+
+    def test_ct_announcement_category_cant_add_contributor(self):
+        setRoles(self.portal, TEST_USER_ID, ['Contributor'])
+        
+        with self.assertRaises(Unauthorized):
+            api.content.create(
+                container=self.parent,
+                type='announcement_category',
+                id='announcement_category',
+            )
 
     def test_ct_announcement_category_globally_not_addable(self):
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
