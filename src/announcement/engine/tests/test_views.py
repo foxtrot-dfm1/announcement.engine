@@ -7,11 +7,11 @@ from plone.app.testing import TEST_USER_ID
 from plone.app.testing import setRoles
 
 from announcement.engine.testing import \
-    ANNOUNCEMEMNT_ENGINE_INTEGRATION_TESTING
+    ANNOUNCEMENT_ENGINE_INTEGRATION_TESTING
 
 
 class TestAnnouncementCreateView(unittest.TestCase):
-    layer = ANNOUNCEMEMNT_ENGINE_INTEGRATION_TESTING
+    layer = ANNOUNCEMENT_ENGINE_INTEGRATION_TESTING
 
     def setUp(self):
         self.portal = self.layer['portal']
