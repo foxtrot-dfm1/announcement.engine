@@ -8,7 +8,7 @@ from zope.component import createObject, queryUtility
 import unittest
 
 
-class AnnouncementIntegrationTest(unittest.TestCase):
+class TestAnnouncementIntegrationTest(unittest.TestCase):
 
     layer = ANNOUNCEMENT_ENGINE_INTEGRATION_TESTING
 
